@@ -17,7 +17,9 @@ import youtube_dl
 import ffmpeg
 import os
 
-os.chdir(os.getcwd())
+wdir = str(os.path.dirname(__file__) + "\\")
+
+os.chdir(wdir)
 
 def ytdl(optV, optA, link):
     youtube_dl.YoutubeDL(optV).download([link])
@@ -51,7 +53,7 @@ def dler(vlink, resH):
     a = ffmpeg.input(VA[1])
 
     ff = ffmpeg.output(v, a, "{}.mp4".format(vT), vcodec='copy', acodec='aac')
-    ff.run(cmd = str(os.getcwd() + r"\ffmpeg.exe"))
+    ff.run(cmd = str(wdir + "ffmpeg.exe"))
 
 
 print("Please enter the URL of the youtube video you would like to download.")
@@ -90,4 +92,4 @@ while res == None or res != resOpts:
 os.remove(VA[0])
 os.remove(VA[1])
 
-print("Your video has been saved in {}".format(os.getcwd() + "\{}.mp4".format(vT)))
+print("Your video has been saved in {}".format(wdir + "{}.mp4".format(vT)))
