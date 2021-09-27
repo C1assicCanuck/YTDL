@@ -6,7 +6,6 @@ from PyQt6 import uic
 wdir = str(os.path.dirname(__file__) + "\\")
 os.chdir(wdir)
 outpath = str(os.environ["USERPROFILE"] + "\\Downloads\\")
-print(os.environ["USERPROFILE"])
 
 class app(QWidget):
     def __init__(self):
