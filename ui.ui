@@ -1014,7 +1014,7 @@
     </palette>
    </property>
    <property name="text">
-    <string>Done</string>
+    <string>Start</string>
    </property>
    <property name="flat">
     <bool>false</bool>
