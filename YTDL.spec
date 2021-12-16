@@ -4,8 +4,7 @@
 block_cipher = None
 
 
-a = Analysis(['C:\\Users\\User\\Desktop\\pyinstaller\\YTDL.py'],
-             pathex=['C:\\Users\\User\\Desktop\\pyinstaller'],
+a = Analysis(['YTDL.py'],
              binaries=[],
              datas=[('FFmpeg.exe', '.'), ('ui.ui', '.'), ('ico.ico', '.')],
              hiddenimports=[],
